@@ -31,4 +31,7 @@ def q6_is_palindrome(text):
         True
     """
     # Your code here
-    pass
+    base_text = text.replace(" ", "")
+    base_text = base_text.lower()
+    reversed_text = base_text[::-1]
+    return base_text == reversed_text

@@ -28,4 +28,8 @@ def q4_safe_division(numerator, denominator):
         None
     """
     # Your code here
-    pass
+    if denominator == 0:
+        return None
+    
+    division = numerator/denominator
+    return division

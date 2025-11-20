@@ -23,4 +23,12 @@ def q2_count_word_frequency(paragraph):
         {'hello': 2, 'world': 1}
     """
     # Your code here
-    pass
+    split_words = paragraph.split()
+    counted_words = {}
+    for word in split_words:
+        if word not in counted_words:
+            counted_words[word] = 1
+        else:
+            counted_words[word] += 1
+
+    return counted_words

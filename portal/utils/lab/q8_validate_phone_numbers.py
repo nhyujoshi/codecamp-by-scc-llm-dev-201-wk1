@@ -25,4 +25,7 @@ def q8_validate_phone_numbers(text):
         ['123-456-7890', '987-654-3210']
     """
     # Your code here
-    pass
+    pattern = r"\d{3}\-\d{3}\-\d{4}"
+
+    phone_list = re.findall(pattern, text)
+    return phone_list

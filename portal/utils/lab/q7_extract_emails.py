@@ -25,4 +25,7 @@ def q7_extract_emails(text):
         ['hello@example.com', 'support@test.org']
     """
     # Your code here
-    pass
+    pattern = r"\w+\@\w+\.\w+"
+
+    email_list = re.findall(pattern, text)
+    return email_list

@@ -23,4 +23,14 @@ def q3_top_3_frequent_words(text):
         [('the', 3), ('and', 2), ('cat', 1)]
     """
     # Your code here
-    pass
+    split_text = text.split()
+    counted_words = {}
+
+    for word in split_text:
+        if word not in counted_words:
+            counted_words[word] = 1
+        else:
+            counted_words[word] += 1
+    
+    top_list = sorted(counted_words.items(), key = lambda item: item[1], reverse = True)
+    return top_list[0:3]

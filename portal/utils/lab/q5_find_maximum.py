@@ -27,4 +27,8 @@ def q5_find_maximum(numbers):
         None
     """
     # Your code here
-    pass
+    if not numbers:
+        return None
+
+    max_number = max(numbers) 
+    return max_number

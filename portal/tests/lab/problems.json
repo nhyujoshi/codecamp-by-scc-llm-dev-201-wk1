@@ -1,5 +1,65 @@
 [
-  {
+    {
+        "func":"q1_count_character_frequency",
+        "args":["hello"],
+        "expected":{"h":1, "e":1,"l":2,"o":1}
+    },
+    {
+        "func":"q2_count_word_frequency",
+        "args":["hello world hello"],
+        "expected":{"hello":2, "world":1}
+    },
+    {
+        "func":"q3_top_3_frequent_words",
+        "args":["the cat and the dog and the bird"],
+        "expected":[["the", 3], ["and", 2], ["cat", 1]]
+    },
+    {
+        "func":"q4_safe_division",
+        "args": [10, 2],
+        "expected":5.0
+    },
+    {
+        "func":"q4_safe_division",
+        "args": [10, 0],
+        "expected": null
+    },
+    {
+        "func":"q5_find_maximum",
+        "args": [[1, 5, 3, 9, 2]],
+        "expected":9
+    },
+    {
+        "func":"q5_find_maximum",
+        "args": [[]],
+        "expected": null
+    },
+    {
+        "func":"q6_is_palindrome",
+        "args":["A man a plan a canal Panama"],
+        "expected": true
+    },
+    {
+        "func":"q6_is_palindrome",
+        "args":["not a car"],
+        "expected": false
+    },
+    {
+        "func":"q7_extract_emails",
+        "args":["This is my email hello@gmail.com and an alternative email bye@gmail.com"],
+        "expected": ["hello@gmail.com", "bye@gmail.com"]
+    },
+    {
+        "func":"q8_validate_phone_numbers",
+        "args":["This is my contact number 987-654-1234 or an alternative 123-456-9876 but not 12-33-876"],
+        "expected": ["987-654-1234", "123-456-9876"]
+    },
+    {
+        "func":"q9_extract_dates",
+        "args":["Event on 25/12/2024 and 01/01/2025 but this is not a legit date 96/43/2024"],
+        "expected": ["25/12/2024", "01/01/2025"]
+    },
+    {
     "func": "q1_count_character_frequency",
     "args": ["hello"],
     "expected": { "h": 1, "e": 1, "l": 2, "o": 1 }

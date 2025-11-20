@@ -35,8 +35,8 @@ class LabTests(unittest.TestCase):
                 
                 try:
                     # Run the function with args
-                    result = func(*args)
-                    
+                    result = json.loads(json.dumps(func(*args)))
+                    print('------------------', result, '-------------', expected)
                     # Assert the result matches expected
                     self.assertEqual(result, expected,
                                    f"Function {func_name} with args {args} returned {result}, expected {expected}")

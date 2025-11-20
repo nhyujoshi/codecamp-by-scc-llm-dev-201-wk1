@@ -25,4 +25,8 @@ def q9_extract_dates(text):
         ['25/12/2024', '01/01/2025']
     """
     # Your code here
-    pass
+    pattern = r"\b(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/\d{4}\b"
+    # pattern = r"\b\d{2}\/\d{2}\/\d{4}\b"
+
+    date_list = re.findall(pattern, text)
+    return date_list
