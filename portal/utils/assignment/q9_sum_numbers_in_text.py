@@ -6,7 +6,7 @@ Example:
     >>> q9_sum_numbers_in_text("I have 3 apples and 4 oranges")
     7
 """
-
+import re
 
 def q9_sum_numbers_in_text(text):
     """
@@ -23,4 +23,13 @@ def q9_sum_numbers_in_text(text):
         7
     """
     # Your code here
-    pass
+    pattern = r"\d+"
+
+    number_list = re.findall(pattern, text)
+
+    total = 0
+
+    for number in number_list:
+        total += int(number)
+
+    return total

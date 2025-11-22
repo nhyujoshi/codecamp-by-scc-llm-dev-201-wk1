@@ -29,4 +29,19 @@ def q5_reverse_words(sentence):
         "olleH, dlroW!"
     """
     # Your code here
-    pass
+    result = ""
+    current_word = ""
+
+    for char in sentence:
+        if char.isalpha():
+            current_word += char
+        else:
+            if current_word:
+                result += current_word[::-1]
+                current_word = ""
+            result += char
+    
+    if current_word:
+        result += current_word[::-1]
+    
+    return result

@@ -9,7 +9,7 @@ Example:
     >>> q7_extract_hashtags("Check out #python and #coding!")
     ['python', 'coding']
 """
-
+import re
 
 def q7_extract_hashtags(text):
     """
@@ -28,4 +28,13 @@ def q7_extract_hashtags(text):
         ['python', 'coding']
     """
     # Your code here
-    pass
+    pattern = r"\#\w+"
+
+    hashtag_list = re.findall(pattern, text)
+
+    cleaned_hashtag = []
+
+    for hashtag in hashtag_list:
+        cleaned_hashtag.append(hashtag[1:])
+
+    return cleaned_hashtag

@@ -33,4 +33,11 @@ def q4_safe_factorial(n):
         None
     """
     # Your code here
-    pass
+    if not isinstance(n, int) or n < 0:
+        return None
+    
+    factorial_result = 1
+    for i in range(1, n+1):
+        factorial_result *= i
+
+    return factorial_result

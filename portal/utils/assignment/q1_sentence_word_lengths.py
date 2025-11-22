@@ -10,6 +10,7 @@ Example:
     {'hello': 5, 'world': 5}
 """
 
+import re
 
 def q1_sentence_word_lengths(sentence):
     """
@@ -29,4 +30,11 @@ def q1_sentence_word_lengths(sentence):
         {'hello': 5, 'world': 5}
     """
     # Your code here
-    pass
+    words = re.findall(r"[a-zA-Z]+", sentence.lower())
+    
+    word_lengths = {}
+
+    for word in words:
+        word_lengths[word] = len(word)
+
+    return word_lengths

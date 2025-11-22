@@ -25,4 +25,12 @@ def q8_remove_duplicates(items):
         [1, 2, 3, 4, 5]
     """
     # Your code here
-    pass
+    items_set = set()
+    items_list = []
+
+    for item in items:
+        if item not in items_set:
+            items_set.add(item)
+            items_list.append(item)
+
+    return items_list

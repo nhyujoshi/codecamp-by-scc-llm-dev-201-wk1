@@ -27,4 +27,8 @@ def q3_count_unique_characters(text):
         8
     """
     # Your code here
-    pass
+    cleaned_text = text.lower().replace(" ","")
+
+    unique_length = len(set(cleaned_text))
+
+    return unique_length

@@ -30,4 +30,12 @@ def q2_common_elements_in_lists(list1, list2):
         {3, 4}
     """
     # Your code here
-    pass
+    common_elements = set()
+
+    for element in list1:
+        if element in list2:
+            common_elements.add(element)
+
+    return common_elements
+
+
