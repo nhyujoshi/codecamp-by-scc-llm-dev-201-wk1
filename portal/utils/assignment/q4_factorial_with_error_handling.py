@@ -33,7 +33,7 @@ def q4_safe_factorial(n):
         None
     """
     # Your code here
-    if not isinstance(n, int) or n < 0:
+    if not isinstance(n, int) or n < 0 or not n:
         return None
     
     factorial_result = 1
