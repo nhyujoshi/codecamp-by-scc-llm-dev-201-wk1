@@ -30,8 +30,11 @@ def q2_common_elements_in_lists(list1, list2):
         {3, 4}
     """
     # Your code here
+
+    # declare empty set to store common elements
     common_elements = set()
 
+    # iterate in list 1, then check if the iteration is present in list 2, only add if true
     for element in list1:
         if element in list2:
             common_elements.add(element)

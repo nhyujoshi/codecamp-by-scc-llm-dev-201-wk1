@@ -28,12 +28,13 @@ def q7_extract_hashtags(text):
         ['python', 'coding']
     """
     # Your code here
-    pattern = r"\#\w+"
 
-    hashtag_list = re.findall(pattern, text)
+    # only capture string starting with # with one or more words
+    hashtag_list = re.findall(r"\#\w+", text)
 
     cleaned_hashtag = []
 
+    # iterate in captured hashtag list, appened the iteration excluding first character
     for hashtag in hashtag_list:
         cleaned_hashtag.append(hashtag[1:])
 

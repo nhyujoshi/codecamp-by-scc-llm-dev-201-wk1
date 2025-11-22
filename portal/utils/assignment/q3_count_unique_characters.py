@@ -27,8 +27,11 @@ def q3_count_unique_characters(text):
         8
     """
     # Your code here
+    
+    # store the parameter in lowercase, and remove all whitespaces
     cleaned_text = text.lower().replace(" ","")
 
+    # use set to remove any duplicate characters, and len to determine the length of remaining characters
     unique_length = len(set(cleaned_text))
 
     return unique_length

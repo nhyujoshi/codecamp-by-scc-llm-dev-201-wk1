@@ -25,9 +25,12 @@ def q8_remove_duplicates(items):
         [1, 2, 3, 4, 5]
     """
     # Your code here
+
+    # declare set to store non-duplicate & list to return in original order
     items_set = set()
     items_list = []
 
+    # iterate in items, only add items that are not in the set since set can't contain duplicates
     for item in items:
         if item not in items_set:
             items_set.add(item)

@@ -40,13 +40,17 @@ def q6_validate_password(password):
         False
     """
     # Your code here
+
+    # check if password is less than 8, only continue if not true
     if len(password) < 8:
         return False
     
+    # declare variables for each case
     has_upper = False
     has_lower = False
     has_digit = False
 
+    # check if each character in password matches any of the three cases
     for char in password:
         if char.isupper():
             has_upper = True
@@ -55,6 +59,7 @@ def q6_validate_password(password):
         elif char.isdigit():
             has_digit = True
     
+    # password is valid only if all three cases are true
     password_valid = has_upper and has_lower and has_digit
 
     return password_valid

@@ -28,10 +28,14 @@ def q10_find_anagrams(word, word_list):
         ['silent', 'enlist']
     """
     # Your code here
-    sorted_word = sorted(word)
 
+    # sort the first word parameter for comparision later
+    sorted_word = sorted(word)
+    
+    # declare list variable to store anagrams
     anagram_list = []
 
+    # iterate loop to check if the sorted words in word_list equals the sorted word from before
     for each in word_list:
         if sorted(each) == sorted_word:
             anagram_list.append(each)

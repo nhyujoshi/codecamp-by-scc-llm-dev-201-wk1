@@ -33,10 +33,15 @@ def q4_safe_factorial(n):
         None
     """
     # Your code here
+
+    # check if parameter is not int, is in negative or empty
     if not isinstance(n, int) or n < 0 or not n:
         return None
     
+    # declare result as 1 so 0 is not multiplied
     factorial_result = 1
+    
+    # loop from range of 1 to n+1 and multiply each iteration
     for i in range(1, n+1):
         factorial_result *= i
 

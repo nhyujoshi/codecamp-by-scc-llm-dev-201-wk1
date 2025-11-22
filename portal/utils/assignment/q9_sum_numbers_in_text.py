@@ -23,12 +23,14 @@ def q9_sum_numbers_in_text(text):
         7
     """
     # Your code here
-    pattern = r"\d+"
 
-    number_list = re.findall(pattern, text)
+    # only capture one or more digits in the text 
+    number_list = re.findall(r"\d+", text)
 
+    # declare total variable to store the sum
     total = 0
 
+    # iterate loop in number_list with captured numbers, convert into int and add
     for number in number_list:
         total += int(number)
 

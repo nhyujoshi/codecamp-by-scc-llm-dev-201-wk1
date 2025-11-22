@@ -30,10 +30,14 @@ def q1_sentence_word_lengths(sentence):
         {'hello': 5, 'world': 5}
     """
     # Your code here
+
+    # store a list of lowercased words excluding non-alphabet characters
     words = re.findall(r"[a-zA-Z]+", sentence.lower())
     
+    # declare empty dictionary
     word_lengths = {}
 
+    # store iterated word as key and length of that word as value
     for word in words:
         word_lengths[word] = len(word)
 
