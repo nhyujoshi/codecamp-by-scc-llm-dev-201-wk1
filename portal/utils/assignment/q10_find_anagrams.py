@@ -32,8 +32,8 @@ def q10_find_anagrams(word, word_list):
 
     anagram_list = []
 
-    for every in word_list:
-        if sorted(every) == sorted_word:
+    for each in word_list:
+        if sorted(each) == sorted_word:
             anagram_list.append(word)
 
     return anagram_list
